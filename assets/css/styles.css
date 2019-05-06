@@ -1,3 +1,30 @@
-/* @import 'mesimports'; */
+nav {
+  background-color: aqua;
+  height: 10vh;
+}
+
+body {
+  margin: 0;
+}
+
+.logo {
+  width: 5vw;
+  position: absolute;
+  top: 0.3vh;
+}
+
+h1 {
+  text-align: center;
+  margin-top: -2vh;
+}
+
+.connecte-titre {
+  text-align: left;
+  margin-left: 10vw;
+}
+
+.fas {
+  size: 5vw;
+}
 
 /*# sourceMappingURL=styles.css.map */
