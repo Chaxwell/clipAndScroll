@@ -6,7 +6,5 @@
 $pagetitle = "Welcome on board";
 //etc
 //and then call a template:
-$tpl = "layouts/index.tpl.php";
-include "layout.php";
-?>
-
+$tpl = "layout/index.tpl.php";
+include "layout/layout.php";
