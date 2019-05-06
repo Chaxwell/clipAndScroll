@@ -39,4 +39,6 @@ if (isset($_SESSION["userId"])) {
 ?>
 <header>
     <nav>Mes liens ici</nav>
+
+    <a href="partials/traitements/deconnexion.php">Déconnexion</a>
 </header>
