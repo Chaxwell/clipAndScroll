@@ -7,5 +7,5 @@ $pagetitle = "Change ce titre dans pages/channel.php";
 //etc
 //and then call a template:
 $tpl = "layouts/channel.tpl.php";
-include "/layout.php";
+include "layouts/layout.php";
 ?>

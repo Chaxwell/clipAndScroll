@@ -7,5 +7,5 @@ $pagetitle = "Change ce titre dans pages/player.php";
 //etc
 //and then call a template:
 $tpl = "layouts/pages.tpl.php";
-include "/layout.php";
+include "layouts/layout.php";
 ?>
