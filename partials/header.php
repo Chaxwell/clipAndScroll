@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 if (!isset($_SESSION["userId"])) {
     
@@ -37,3 +38,8 @@ if (isset($_SESSION["userId"])) {
     ';
     }
 ?> 
+=======
+<header>
+    <nav>Mes liens içi</nav>
+</header>
+>>>>>>> 6cb785b557ad95513b82f49e59262f7121fa7547
