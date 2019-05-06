@@ -9,3 +9,4 @@ $pagetitle = "Welcome on board";
 $tpl = "layouts/index.tpl.php";
 include "layout.php";
 ?>
+
