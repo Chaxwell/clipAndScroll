@@ -3,9 +3,9 @@
 // TODO include dirname($_SERVER['DOCUMENT_ROOT']).'/cfg/settings.php';
 //getting required data
 // TODO? $DATA=dbgetarr("SELECT * FROM links");
-$pagetitle = "Welcome on board";
+$pagetitle = "Change ce titre dans pages/clip-upload.php";
 //etc
 //and then call a template:
-$tpl = "layouts/index.tpl.php";
-include "layout.php";
+$tpl = "layouts/clip-upload.tpl.php";
+include "/layout.php";
 ?>
