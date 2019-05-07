@@ -12,6 +12,10 @@
 
 <body>
 
+    <!-- POUR AXEL :
+    Tu peux tout modifier sur ce lien sauf :
+    1/ le data-toggle
+    2/ le data-target -->
     <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#connexion">Connexion</a>
 
     <!-- MODAL -->
