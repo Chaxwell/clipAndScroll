@@ -21,12 +21,16 @@ body {
   top: 0.3vh; }
 
 h1 {
+  width: 10vw;
   text-align: center;
+  margin-right: 0;
   position: relative;
   top: 3vh;
   font-family: "Sigmar One", cursive; }
 
 .connecte-titre {
+  margin-right: 0;
+  width: 10vw;
   text-align: left;
   margin-left: 10vw; }
 
@@ -45,11 +49,11 @@ a {
 .sign {
   float: right; }
 
-.deconnexion {
+.user-dropdown {
   float: right;
   color: black;
   margin-right: 5px; }
-  .deconnexion:hover {
+  .user-dropdown:hover {
     color: black;
     text-decoration: none; }
 
@@ -75,11 +79,15 @@ a {
     position: absolute;
     top: 0.3vh; }
   h1 {
+    width: 10vw;
     text-align: center;
+    margin-right: 0;
     position: relative;
     top: 3vh;
     font-family: "Sigmar One", cursive; }
   .connecte-titre {
+    margin-right: 0;
+    width: 10vw;
     text-align: left;
     margin-left: 10vw; }
   a.upload {
