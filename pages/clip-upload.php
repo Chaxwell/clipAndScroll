@@ -6,6 +6,5 @@
 $pagetitle = "Change ce titre dans pages/clip-upload.php";
 //etc
 //and then call a template:
-$tpl = "layouts/clip-upload.tpl.php";
-include "layouts/layout.php";
-?>
+$tpl = "../layouts/clip-upload.tpl.php";
+include "../layouts/layout.php";
