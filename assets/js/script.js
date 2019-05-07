@@ -1,5 +1,7 @@
-let userDrop = document.getElementsByClassName('user-dropdown');
-console.log(userDrop);
+ let userDrop = document.querySelector('.user-dropdown');
+ let userMain = document.querySelector('.user-main');
+
 userDrop.addEventListener("click", function() {
-     userDrop.classList.toggle('dropdown-visible');
+   
+     userMain.classList.toggle('dropdown-visible');
 } );
