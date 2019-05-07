@@ -32,7 +32,7 @@ if (!isset($_SESSION['userId'])) {
         <h1>clipAndScroll</h1>
         <nav>
         ' ;
-        include ("partials/connexion-inscription.php");  
+        require($path . "/partials/connexion-inscription.php");  
        echo '
 
     
@@ -41,4 +41,3 @@ if (!isset($_SESSION['userId'])) {
     
     ';
 }
-?>
