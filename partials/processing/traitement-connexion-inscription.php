@@ -31,6 +31,7 @@ if (isset($_POST['inscription'])) {
 
         // Finally, we set its session, thus connecting him to the website
         $_SESSION['userId'] = $userIntel['id'];
+        $_SESSION['nickname'] = $nickname;
 
         // Redirection to index.php
         header("Location: ../../index.php");

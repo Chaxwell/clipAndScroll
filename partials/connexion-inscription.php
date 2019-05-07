@@ -1,4 +1,3 @@
-
 <!-- POUR AXEL :
 Tu peux tout modifier sur ce lien sauf :
 1/ le data-toggle
@@ -35,8 +34,8 @@ Tu peux tout modifier sur ce lien sauf :
                         <input type="checkbox" class="form-check-input" id="stayConnected">
                         <label class="form-check-label" for="stayConnected">Se souvenir de moi</label>
                     </div> -->
-                    <button type="submit" class="btn btn-primary" name="inscription">Inscription</button>
                     <button type="submit" class="btn btn-primary" name="connexion">Connexion</button>
+                    <button type="submit" class="btn btn-primary" name="inscription">Inscription</button>
                 </form>
             </div>
         </div>
