@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Amatic+SC");
 @import url("https://fonts.googleapis.com/css?family=Sigmar+One");
+.connexion {
+  float: right;
+  margin-top: 7vh; }
+
 nav {
   background-color: aqua;
   height: 80px; }
@@ -37,6 +41,25 @@ a.upload {
 
 a {
   text-decoration: none; }
+
+.sign {
+  float: right; }
+
+.deconnexion {
+  float: right;
+  color: black;
+  margin-right: 5px; }
+  .deconnexion:hover {
+    color: black;
+    text-decoration: none; }
+
+.MyChannel {
+  float: right;
+  color: black;
+  margin-right: 5vw; }
+  .MyChannel:hover {
+    color: black;
+    text-decoration: none; }
 
 @media (max-width: 600px) {
   nav {

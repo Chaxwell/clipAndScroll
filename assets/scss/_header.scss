@@ -47,6 +47,28 @@ a.upload {
 a{
   text-decoration: none;
 }
+.sign{
+  float: right;
+}
+.deconnexion{
+  float: right;
+  color: black;
+  margin-right: 5px;
+   &:hover{
+    color: black;
+    text-decoration: none;
+   }
+}
+.MyChannel{
+  float: right;
+  color: black;
+  margin-right: 5vw;
+  &:hover{
+    color: black;
+    text-decoration: none;
+   }
+}
+
 @media (max-width: 600px){
   nav {
 
