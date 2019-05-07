@@ -15,7 +15,7 @@ if (isset($_SESSION["userId"])) {
            <a class="upload" href="../pages/clip-upload.php">upload</a>
                        <a class="deconnexion" href="partials/processing/deconnexion.php"> Déconnexion </a> 
 
-           <a class="MyChannel" href="pages/channel.php"> ma chaine </a>
+           <a class="MyChannel" href="pages/channel.php"> '.$_SESSION['nickname'].'</a>
        </nav>
     </header>
     
