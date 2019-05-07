@@ -31,7 +31,9 @@ if (!isset($_SESSION['userId'])) {
         </div>
         <h1>clipAndScroll</h1>
         <nav>
-        '. include ("partials/connexion-inscription.php");  '
+        ' ;
+        include ("partials/connexion-inscription.php");  
+       echo '
 
     
      </nav>
