@@ -3,7 +3,7 @@
 nav {
 
   background-color: aqua;
-  height: 80px;
+  height: 120px;
 }
 header{
   margin-top: -3.1vh;
@@ -20,20 +20,21 @@ body {
   top: 0.3vh;
 }
 
-h1 {
-  width: 10vw;
-  text-align: center;
-  margin-right: 0;
-  position: relative;
-  top: 3vh;
+.titre-pas-co {
+  margin-top: 3vh;
+  height: 1vh;
+text-align: center;
   font-family: "Sigmar One", cursive;
 }
 
 .connecte-titre {
-  margin-right: 0;
+  margin-top: 3vh;
+  height: 1vh;
   width: 10vw;
   text-align: left;
   margin-left: 10vw;
+  font-family: "Sigmar One", cursive;
+
 }
 
 a.upload {
@@ -46,12 +47,26 @@ a.upload {
   color: black;
 
 }
+.user-main{
+  opacity: 0;
+  float: right;
+  width: 100px;
+  height: 50px;
+}
 .dropdown-visible{
-background-color: rgb(255, 0, 0);
+  opacity: 1;
+background-color: rgba(255, 255, 255, 0.904);
+
 }
 
 a{
+  color:black;
   text-decoration: none;
+  &:hover{
+    color:rgb(65, 65, 65);
+    text-decoration: none;
+    
+  }
 }
 .sign{
   float: right;
@@ -74,6 +89,7 @@ a{
     text-decoration: none;
    }
 }
+
 
 @media (max-width: 600px){
   nav {

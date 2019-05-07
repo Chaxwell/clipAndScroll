@@ -6,7 +6,7 @@
 
 nav {
   background-color: aqua;
-  height: 80px; }
+  height: 120px; }
 
 header {
   margin-top: -3.1vh;
@@ -20,19 +20,19 @@ body {
   position: absolute;
   top: 0.3vh; }
 
-h1 {
-  width: 10vw;
+.titre-pas-co {
+  margin-top: 3vh;
+  height: 1vh;
   text-align: center;
-  margin-right: 0;
-  position: relative;
-  top: 3vh;
   font-family: "Sigmar One", cursive; }
 
 .connecte-titre {
-  margin-right: 0;
+  margin-top: 3vh;
+  height: 1vh;
   width: 10vw;
   text-align: left;
-  margin-left: 10vw; }
+  margin-left: 10vw;
+  font-family: "Sigmar One", cursive; }
 
 a.upload {
   margin-top: 15vh;
@@ -43,11 +43,22 @@ a.upload {
   height: 12vh;
   color: black; }
 
+.user-main {
+  opacity: 0;
+  float: right;
+  width: 100px;
+  height: 50px; }
+
 .dropdown-visible {
-  background-color: red; }
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.904); }
 
 a {
+  color: black;
   text-decoration: none; }
+  a:hover {
+    color: #414141;
+    text-decoration: none; }
 
 .sign {
   float: right; }
