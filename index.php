@@ -4,7 +4,6 @@ session_start();
 // TODO include dirname($_SERVER['DOCUMENT_ROOT']).'/cfg/settings.php';
 //getting required data
 // TODO? $DATA=dbgetarr("SELECT * FROM links");
-
 $pagetitle = "clip & scroll !";
 //etc
 //and then call a template:
