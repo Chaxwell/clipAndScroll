@@ -43,6 +43,9 @@ a.upload {
   height: 12vh;
   color: black; }
 
+.dropdown-visible {
+  background-color: red; }
+
 a {
   text-decoration: none; }
 
