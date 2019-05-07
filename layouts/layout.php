@@ -7,7 +7,7 @@
     <body>
 	<?php include "partials/header.php" ?>
 	<div id="page">
-	    <?php include $tpl ?>
+	<?php include $tpl ?>
 	</div>
 
 
