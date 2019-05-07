@@ -1,19 +1,9 @@
 <?php
 session_start();
 
-try {
-    $bdd = new PDO("mysql:host=127.0.0.1;dbname=clipAndScroll;charset=utf8", "root", "");
-    $bdd->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (Exception $err) {
-    die('Error : ' . $err->getMessage());
-}
-
+require('../config/connexion-bdd.php');
 require('../functions/fonctions-connexion-inscription.php');
 
-$req = $bdd->prepare("SELECT * FROM users");
-$req->execute();
-$usersNameAndPassword = $req->fetchAll();
 
 if (isset($_POST['inscription'])) {
     // Check if post globals aren't empty
@@ -51,6 +41,31 @@ if (isset($_POST['inscription'])) {
 }
 
 if (isset($_POST['connexion'])) {
-    // TODO:
-    echo 'connexion';
+    // Check if post globals aren't empty
+    if (!empty($_POST['nickname']) && !empty($_POST['password'])) {
+        $nickname = htmlspecialchars($_POST['nickname']);
+        $password = htmlspecialchars($_POST['password']);
+    } else {
+        die("Erreur: un champ n'est pas rempli.");
+    }
+
+    // Check if the nickname exists
+    if (!isNicknameUnique($bdd, $nickname)) {
+        // We retrieve all the intel about the user from its nickname
+        $userIntel = allUserIntelFromNickname($bdd, $nickname);
+
+        // We check if the password provided is equal to the one in the DB
+        if (isPasswordValidFromNickname($bdd, $password, $nickname)) {
+            // We set its session, thus connecting him to the website
+            $_SESSION['userId'] = $userIntel['id'];
+            $_SESSION['nickname'] = $nickname;
+
+            // Redirection to index.php
+            header("Location: ../../index.php");
+            die();
+        } else {
+            echo $password, $nickname;
+            die("Erreur: mauvais mot de passe.");
+        }
+    }
 }

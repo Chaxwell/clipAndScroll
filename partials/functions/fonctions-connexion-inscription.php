@@ -22,10 +22,24 @@ function isNicknameUnique($bdd, $nickname)
 {
     $req = $bdd->prepare("SELECT * FROM users WHERE nickname = ?");
     $req->execute(array($nickname));
-    $userInfo = $req->fetch();
+    $userIntel = $req->fetch();
 
     // If the request is empty, the nickname is therefore unique
-    if (!$userInfo) return true;
+    if (!$userIntel) return true;
+    else return false;
+}
+
+function isPasswordValidFromNickname($bdd, $password, $nickname)
+{
+    $req = $bdd->prepare("SELECT * FROM users WHERE nickname = ?");
+    $req->execute(array($nickname));
+    $userIntel = $req->fetch();
+
+    $salt = $userIntel['salt'];
+    $hashedPassword = $userIntel['password'];
+
+    // If the passwords are equal
+    if (hash('sha256', $password . $salt) == $hashedPassword) return true;
     else return false;
 }
 
