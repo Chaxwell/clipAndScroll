@@ -17,7 +17,7 @@ Tu peux tout modifier sur ce lien sauf :
                 <h5 class="modal-title mx-auto" id="connexion">Connectez-vous</h5>
             </div>
             <div class="modal-body mx-auto">
-                <form action="partials/processing/traitement-connexion-inscription.php" method="post" autocomplete="off" oninput="passwordConfirmation.setCustomValidity(passwordConfirmation.value != password.value ? 'Mots de passe différents' : '')">
+                <form action="/partials/processing/traitement-connexion-inscription.php" method="post" autocomplete="off" oninput="passwordConfirmation.setCustomValidity(passwordConfirmation.value != password.value ? 'Mots de passe différents' : '')">
                     <div class="form-group">
                         <label for="nickname">Pseudo</label>
                         <input class="form-control" type="text" id="nickname" name="nickname" placeholder="Votre pseudo">

@@ -13,20 +13,20 @@ $path = $_SERVER['DOCUMENT_ROOT'];
 
 <body>
     <?php include $path . "/partials/header.php" ?>
-    
-    <div id="page">
-		<?php include $tpl ?>
 
-	</div>
+    <div id="page" class="container">
+        <?php include $tpl ?>
+
+    </div>
 
 
-	<!-- rempli moi (ou pas) -->
+    <!-- rempli moi (ou pas) -->
 
-	<script src=""></script>
-	<script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src=""></script>
+    <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
     <script src="../assets/vendor/popper.js/dist/popper.min.js"></script>
     <script src="../assets/vendor/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
     <script src="../assets/js/script.js"></script>
-    </body>
+</body>
 
 </html>
