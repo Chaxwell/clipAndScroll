@@ -1,40 +1,83 @@
-<?php 
-session_start();
+<?php
+
 include "config/connexion-bdd.php";
 
-$req = $bdd->prepare("SELECT * FROM playlists WHERE userId = ?");
+/*
+..######...#######..##......
+.##....##.##.....##.##......
+.##.......##.....##.##......
+..######..##.....##.##......
+.......##.##..##.##.##......
+.##....##.##....##..##......
+..######...#####.##.########
+*/
+$req = $bdd->prepare("SELECT * FROM playlists WHERE userId = ? ");
 
-$rep = $bdd->prepare("SELECT * FROM videos WHERE id = ?");
+$reqplaylist = $bdd->prepare("SELECT DISTINCT playlistName FROM playlists WHERE userId = ?  ");
 
+
+$reqplaylist->execute(array($_SESSION["userId"]));
+
+$playlistsName = $reqplaylist->fetchAll();
 
 $req->execute(array($_SESSION["userId"]));
 
-
-
 $playlists = $req->fetchAll();
-$videoPlaylists = $rep->fetchAll();
 
-$rep->execute(array($playlists["videoId"]));
+
 ?>
 <div class="playlist">
-    
-<?php
 
-foreach ($playlists as $playlist) {
+    <?php
+    /*
+    .########..##..........###....##....##.##.......####..######..########
+    .##.....##.##.........##.##....##..##..##........##..##....##....##...
+    .##.....##.##........##...##....####...##........##..##..........##...
+    .########..##.......##.....##....##....##........##...######.....##...
+    .##........##.......#########....##....##........##........##....##...
+    .##........##.......##.....##....##....##........##..##....##....##...
+    .##........########.##.....##....##....########.####..######.....##...
+    */
 
-    echo "<div class='playlist-dropdown' onclick='dropdown-playlist-toggle()'>".$playlist["playlistName"]."</div>";
-    echo "<br>";
-    foreach ($videoPlaylists as $videoPlaylist) {
-    
-   
-    echo " <div class='playlist-video'>
-            <h3 class='playlist-titre-video'>".$videoPlaylist["title"]."</h3>
-            <button class='playlist-delete-video'></button>
-    
-    </div> "; 
-}
-}
+    foreach ($playlistsName as $playlistName) {
+        $rep = $bdd->prepare("SELECT * FROM playlists WHERE playlistName = ?");
 
-?>
+        $rep->execute(array($playlistName["playlistName"]));
+
+        $nameVideoPlaylists = $rep->fetchAll();
+
+       
+
+        $namePlay =  $playlistName["playlistName"];
+
+        echo '<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle-playlist" type="button" >
+   ' . $playlistName["playlistName"] . '
+  </button>';
+
+        foreach ($playlists as $playlist) {
+         
+            echo '<div class="dropdown-menu-playlist dropdown-visible" >';
+            foreach ($nameVideoPlaylists as $nameVideoPlaylist) {
+               
+                $repvideo = $bdd->prepare("SELECT * FROM videos WHERE id = ?");
+
+                $repvideo->execute(array($nameVideoPlaylist["videoId"]));
+
+                $videoPlaylists = $repvideo->fetchAll();
+
+                foreach ($videoPlaylists as $videoPlaylist) {
+                  
+                    echo $videoPlaylist["title"];
+                    echo "<br>";
+                }
+            }
+            echo '</div>';
+        }
+        echo ' </div>';
+        echo "<br>";
+    }
+
+    ?>
 
 </div>

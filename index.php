@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 //include our settings, connect to database etc.
 // TODO include dirname($_SERVER['DOCUMENT_ROOT']).'/cfg/settings.php';
 //getting required data
