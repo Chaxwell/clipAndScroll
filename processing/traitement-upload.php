@@ -1,5 +1,5 @@
 <?php
-// session_start();
+session_start();
 require('../functions/fonctions-upload.php');
 require('../partials/config/connexion-bdd.php');
 
@@ -89,7 +89,7 @@ if (!empty($_FILES['clipFile']) && !empty($_FILES['clipThumbnail']) && !empty($_
     }
 
 
-    uploadFileToDB($bdd, 6, $target_image_file, $clipname, $clipdescription, $target_video_file);
+    uploadFileToDB($bdd, $_SESSION['userId'], $target_image_file, $clipname, $clipdescription, $target_video_file);
     header('Location: /pages/channel.php');
 } else {
     header("refresh:2;url=/pages/clip-upload.php");
