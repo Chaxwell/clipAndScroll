@@ -1,5 +1,5 @@
 <div class="form-frame">
-    <form action="/partials/processing/traitement-upload.php" method="POST" enctype="multipart/form-data">
+    <form action="/processing/traitement-upload.php" method="POST" autocomplete="off" enctype="multipart/form-data">
         <div class="form-group">
             <label for="clip-file">Choisissez votre clip</label>
             <input type="file" class="form-control-file" id="clip-file" name="clipFile" accept="video/*">

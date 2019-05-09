@@ -19,8 +19,8 @@ function randomString()
     shuffle($seed);
     $randomString = '';
 
-    // We pick 255 random characters from the seed
-    foreach (array_rand($seed, 255) as $n) $randomString .= $seed[$n];
+    // We pick 250 random characters from the seed
+    foreach (array_rand($seed, 250) as $n) $randomString .= $seed[$n];
 
     return $randomString;
 }
