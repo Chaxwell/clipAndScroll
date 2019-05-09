@@ -1,20 +1,20 @@
 <div class="form-frame">
-    <form action="../processing/traitement-upload.php" method="POST" enctype="multipart/form-data">
+    <form action="/processing/traitement-upload.php" method="POST" autocomplete="off" enctype="multipart/form-data">
         <div class="form-group">
-            <label for="clipFile">Choisissez votre clip</label>
-            <input type="file" class="form-control-file" id="clipFile">
+            <label for="clip-file">Choisissez votre clip</label>
+            <input type="file" class="form-control-file" id="clip-file" name="clipFile" accept="video/*">
         </div>
         <div class="form-group">
-            <label for="thumbnailFile">Choisissez votre miniature</label>
-            <input type="file" class="form-control-file" id="thumbnailFile">
+            <label for="clip-thumbnail">Choisissez votre miniature</label>
+            <input type="file" class="form-control-file" id="clip-thumbnail" name="clipThumbnail" accept="image/*">
         </div>
         <div class="form-group">
-            <label for="clipName">Nom du clip</label>
-            <input type="text" class="form-control" id="clipName" placeholder="Le nom de votre clip">
+            <label for="clip-name">Nom du clip</label>
+            <input type="text" class="form-control" id="clip-name" placeholder="Le nom de votre clip" name="clipName">
         </div>
         <div class="form-group">
-            <label for="clipDescription">Description</label>
-            <textarea class="form-control" id="clipDescription" rows="5" placeholder="Sa description"></textarea>
+            <label for="clip-description">Description</label>
+            <textarea class="form-control" id="clip-description" rows="5" name="clipDescription" placeholder="Sa description"></textarea>
         </div>
 
         <button class="btn btn-primary" type="submit" name="submit">Envoyer le clip</button>

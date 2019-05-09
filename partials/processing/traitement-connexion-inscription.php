@@ -68,5 +68,7 @@ if (isset($_POST['connexion'])) {
             echo $password, $nickname;
             die("Erreur: mauvais mot de passe.");
         }
+    } else {
+        die('Erreur: ce pseudo n\'existe pas');
     }
 }
