@@ -2,29 +2,35 @@
 @import url("https://fonts.googleapis.com/css?family=Sigmar+One");
 .connexion {
   float: right;
-  margin-top: 7vh; }
+  margin-top: 7vh;
+}
 
 nav {
   background-color: aqua;
-  height: 120px; }
+  height: 120px;
+}
 
 header {
   margin-top: -3.1vh;
-  background-color: aqua; }
+  background-color: aqua;
+}
 
 body {
-  margin: 0; }
+  margin: 0;
+}
 
 .logo {
   width: 100px;
   position: absolute;
-  top: 0.3vh; }
+  top: 0.3vh;
+}
 
 .titre-pas-co {
   margin-top: 3vh;
   height: 1vh;
   text-align: center;
-  font-family: "Sigmar One", cursive; }
+  font-family: "Sigmar One", cursive;
+}
 
 .connecte-titre {
   margin-top: 3vh;
@@ -32,85 +38,128 @@ body {
   width: 10vw;
   text-align: left;
   margin-left: 10vw;
-  font-family: "Sigmar One", cursive; }
+  font-family: "Sigmar One", cursive;
+}
 
 a.upload {
   margin-top: 15vh;
   margin-left: 45vw;
   width: 10vw;
   font-size: 5vw;
-  font-family: 'Amatic SC', cursive;
+  font-family: "Amatic SC", cursive;
   height: 12vh;
-  color: black; }
+  color: black;
+}
 
 .user-main {
   opacity: 0;
   float: right;
   width: 100px;
-  height: 50px; }
+  height: 50px;
+}
 
 .dropdown-visible {
   opacity: 1;
-  background-color: rgba(255, 255, 255, 0.904); }
+  background-color: rgba(255, 255, 255, 0.904);
+}
 
 a {
   color: black;
-  text-decoration: none; }
-  a:hover {
-    color: #414141;
-    text-decoration: none; }
+  text-decoration: none;
+}
+a:hover {
+  color: #414141;
+  text-decoration: none;
+}
 
 .sign {
-  float: right; }
+  float: right;
+}
 
 .user-dropdown {
   float: right;
   color: black;
-  margin-right: 5px; }
-  .user-dropdown:hover {
-    color: black;
-    text-decoration: none; }
+  margin-right: 5px;
+}
+.user-dropdown:hover {
+  color: black;
+  text-decoration: none;
+}
 
 .MyChannel {
   float: right;
   color: black;
-  margin-right: 5vw; }
-  .MyChannel:hover {
-    color: black;
-    text-decoration: none; }
+  margin-right: 5vw;
+}
+.MyChannel:hover {
+  color: black;
+  text-decoration: none;
+}
 
 @media (max-width: 600px) {
   nav {
     background-color: #00ff22;
-    height: 80px; }
+    height: 80px;
+  }
+
   header {
     margin-top: -3.1vh;
-    background-color: aqua; }
+    background-color: aqua;
+  }
+
   body {
-    margin: 0; }
+    margin: 0;
+  }
+
   .logo {
     width: 100px;
     position: absolute;
-    top: 0.3vh; }
+    top: 0.3vh;
+  }
+
   h1 {
     width: 10vw;
     text-align: center;
     margin-right: 0;
     position: relative;
     top: 3vh;
-    font-family: "Sigmar One", cursive; }
+    font-family: "Sigmar One", cursive;
+  }
+
   .connecte-titre {
     margin-right: 0;
     width: 10vw;
     text-align: left;
-    margin-left: 10vw; }
+    margin-left: 10vw;
+  }
+
   a.upload {
     width: 50px;
     font-size: 40px;
-    font-family: 'Amatic SC', cursive;
+    font-family: "Amatic SC", cursive;
     height: 16vh;
-    color: black; }
+    color: black;
+  }
+
   a {
-    text-decoration: none; } }
+    text-decoration: none;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu a::after {
+  transform: rotate(-90deg);
+  position: absolute;
+  right: 6px;
+  top: 0.8em;
+}
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+}
 
 /*# sourceMappingURL=styles.css.map */
