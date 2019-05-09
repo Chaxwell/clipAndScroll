@@ -49,9 +49,10 @@ a.upload {
   width: 100px;
   height: 50px; }
 
-.dropdown-visible {
-  opacity: 1;
-  background-color: rgba(255, 255, 255, 0.904); }
+.dropdown-menu-playlist {
+  background-color: rgba(219, 219, 219, 0.904);
+  width: 10vw; }
+
 
 a {
   color: black;
@@ -71,11 +72,12 @@ a {
     color: black;
     text-decoration: none; }
 
-.MyChannel {
+.channel {
   float: right;
   color: black;
   margin-right: 5vw; }
-  .MyChannel:hover {
+
+  .channel:hover {
     color: black;
     text-decoration: none; }
 
@@ -114,10 +116,12 @@ a {
     text-decoration: none; } }
 
 /*# sourceMappingURL=styles.css.map */
+
 main.videos_and_aside > div {
   text-align: center;
   border: 1px solid  black;
   padding: 10px; }
+
 
 .dropdown-submenu {
   position: relative; }
