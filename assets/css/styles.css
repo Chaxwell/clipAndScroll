@@ -56,6 +56,17 @@ a.upload {
   background-color: rgba(219, 219, 219, 0.904);
   width: 10vw; }
 
+.btn-channel {
+  height: 6vh; }
+
+.titre-playlist {
+  height: 7vh;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.068); }
+  .titre-playlist:hover {
+    background-color: rgba(0, 0, 0, 0.11); }
+  .titre-playlist:active {
+    border: 1px rgba(0, 0, 0, 0.185) solid; }
+
 a {
   color: black;
   text-decoration: none; }

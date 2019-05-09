@@ -51,13 +51,13 @@ $playlists = $req->fetchAll();
         $namePlay =  $playlistName["playlistName"];
 
         echo '<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle-playlist" type="button" >
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
    ' . $playlistName["playlistName"] . '
   </button>';
 
         foreach ($playlists as $playlist) {
          
-            echo '<div class="dropdown-menu-playlist dropdown-visible" >';
+            echo '<div class="dropdown-menu "  aria-labelledby="dropdownMenu2" >';
             foreach ($nameVideoPlaylists as $nameVideoPlaylist) {
                
                 $repvideo = $bdd->prepare("SELECT * FROM videos WHERE id = ?");
@@ -68,8 +68,8 @@ $playlists = $req->fetchAll();
 
                 foreach ($videoPlaylists as $videoPlaylist) {
                   
-                    echo $videoPlaylist["title"];
-                    echo "<br>";
+                    echo '<a class="dropdown-item titre-playlist" type="button" href="/pages/player.php?id='.$videoPlaylist["id"].'">'.$videoPlaylist["title"].'</a>';
+                
                 }
             }
             echo '</div>';

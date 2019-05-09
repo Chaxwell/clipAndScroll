@@ -12,10 +12,14 @@ if (isset($_SESSION["userId"])) {
         <h1 class="connecte-titre">ClipAndScroll</h1>
 
         <nav>
-        
+        <div class="btn-group dropleft">
            <a class="upload" href="../pages/clip-upload.php">upload</a>
-                       <a class="user-dropdown" href="#">' . $_SESSION['nickname'] . '</a> 
-  <div class="user-main">
+           <button type="button" class="btn-channel btn btn-secondary dropdown-toggle " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           ' . $_SESSION['nickname'] . '
+  </button>
+    
+                       <div class="dropdown-menu">
+
   <a href="/partials/processing/deconnexion.php">déconnexion</a>
   </div>
           <a class="channel" href="#">My channel</a> 
