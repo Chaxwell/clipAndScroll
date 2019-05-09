@@ -6,6 +6,6 @@
 $pagetitle = "Change ce titre dans pages/clip-update.php";
 //etc
 //and then call a template:
-$tpl = "layouts/clip-upate.tpl.php";
-include "layouts/layout.php";
-?>
+$path = $_SERVER['DOCUMENT_ROOT'];
+$tpl = $path . "/layouts/clip-update.tpl.php";
+include $path . "/layouts/layout.php";
